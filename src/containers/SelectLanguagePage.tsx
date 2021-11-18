@@ -39,7 +39,7 @@ export const SelectLanguagePage = () => {
           <TextTransition
             text={ TEXTS[index % TEXTS.length] }
             springConfig={ presets.gentle }
-            style={{fontSize: '35px', fontWeight: 800, margin: 0, textAlign: 'center'}}
+            style={{fontSize: '35px', fontWeight: 800, margin: 0, textAlign: 'center', backgroundColor: 'white'}}
           />
           <div style={{
             width: '100%',
