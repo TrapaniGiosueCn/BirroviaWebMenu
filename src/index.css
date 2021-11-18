@@ -1,10 +1,17 @@
+@font-face {
+  font-family: "Mouse Deco";
+  src: local("Mouse Deco"), url("./Fonts/Mouse_Deco.ttf") format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Mouse Deco";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: "Mouse Deco";
 }
 
 code {

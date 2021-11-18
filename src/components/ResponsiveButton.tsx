@@ -26,7 +26,7 @@ export const ResponsiveButton = (props: ButtonType) => {
                  props.icon && props.icon
                }
              </div>
-             <ResponsiveText size={22} font={TextFont.BODY} label={props.text} otherStyle={{margin: 0, color: props.textColor}} />
+             <ResponsiveText size={20} font={TextFont.BODY} label={props.text} otherStyle={{margin: 0, color: props.textColor}} />
            </div>
          </button>
        </div>

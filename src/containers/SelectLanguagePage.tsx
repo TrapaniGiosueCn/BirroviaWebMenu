@@ -1,17 +1,29 @@
 import React                         from 'react';
 import { ResponsiveImage }           from '../components/ResponsiveImage';
 import Logo                          from '../Images/BirroviaLogo.jpeg';
-import { ResponsiveText }            from '../components/ResponsiveText';
-import { TextFont }                  from '../Entities/Texts';
 import { ImageAlignmentH }           from '../Entities/Images';
 import { ResponsiveButton }          from '../components/ResponsiveButton';
 import { ButtonAction }              from '../Entities/Buttons';
 import UK                            from '../Images/uk_flag.png'
 import IT                            from '../Images/it-flag.png'
-import { TrainSvg }                  from '../Svgs/TrainSvg'
 import { SvgTrainBackgroundWrapper } from '../Hoc/SvgTrainBAckgroundWrapper';
+import TextTransition, { presets } from "react-text-transition";
+
+const TEXTS = [
+  "Welcome to Birrovia...",
+  "Benvenuto in Birrovia..."
+];
 
 export const SelectLanguagePage = () => {
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() =>
+        setIndex(index => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
   return (
     <SvgTrainBackgroundWrapper>
       <div className={'full_center_div'}>
@@ -21,12 +33,17 @@ export const SelectLanguagePage = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          marginTop: "10%"
         }}>
-          <ResponsiveText size={40} font={TextFont.TITLE} label={'Welcome to Birrovia...'} otherStyle={{margin: 0, textAlign: 'center'}} />
+          <TextTransition
+            text={ TEXTS[index % TEXTS.length] }
+            springConfig={ presets.gentle }
+            style={{fontSize: '35px', fontWeight: 800, margin: 0, textAlign: 'center'}}
+          />
           <div style={{
             width: '100%',
-            marginTop: '30%',
+            marginTop: '25%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
