@@ -7,7 +7,10 @@ import { TextFont }                 from '../Entities/Texts';
 export const ResponsiveButton = (props: ButtonType) => {
   const history = useHistory()
   const handleRedirect = (t: any) => {
-    history.push(t)
+    if (props.link)
+      window.location.href=t;
+    else
+      history.push(t)
   }
    if (props.action === ButtonAction.LINK)
      return (

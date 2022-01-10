@@ -1,10 +1,18 @@
-import React                          from 'react';
-import { ResponsiveText }             from '../components/ResponsiveText';
+import React                            from 'react';
+import { ResponsiveText }               from '../components/ResponsiveText';
 import { TextFont }                   from '../Entities/Texts';
 import { ResponsiveButton }           from '../components/ResponsiveButton';
 import { ButtonAction }               from '../Entities/Buttons';
-import { FaWineGlassAlt }             from 'react-icons/fa'
+import {
+  FaGlassWhiskey,
+  FaHamburger,
+  FaPizzaSlice,
+  FaWineGlassAlt
+}                                     from 'react-icons/fa'
 import { SvgTrain2BackgroundWrapper } from '../Hoc/SvgTrain2BackgroundWrapper';
+import { GiKnifeFork, GiSandwich }    from 'react-icons/gi';
+import { IoBeer }                     from 'react-icons/io5';
+import { BsFillCalendar2DateFill }    from 'react-icons/bs';
 
 export const EnglishSelectionPage = () => {
   return (
@@ -13,29 +21,29 @@ export const EnglishSelectionPage = () => {
         <ResponsiveText size={40} font={TextFont.TITLE} label={'Choose what you prefer...'} otherStyle={{textAlign: 'center'}} />
         <div style={{
           display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'row',
           marginTop: '30%',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'row',
           width: '100%',
           marginBottom: '7%'
         }}>
           <ResponsiveButton
-            text={'Button1'}
+            text={'Story'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/story'}
             textColor={'white'}
             icon={<FaWineGlassAlt color={'white'} size={20}/> }
           />
           <div style={{width: 20}}/>
           <ResponsiveButton
-            text={'Button2'}
+            text={'Sandwich'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/sandwich'}
             textColor={'white'}
-            icon={<FaWineGlassAlt color={'white'} size={20}/> }
+            icon={<GiSandwich color={'white'} size={20}/> }
           />
         </div>
         <div style={{
@@ -47,21 +55,21 @@ export const EnglishSelectionPage = () => {
           marginBottom: '7%'
         }}>
           <ResponsiveButton
-            text={'Button3'}
+            text={'Pizzas'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/pizzas'}
             textColor={'white'}
-            icon={<FaWineGlassAlt color={'white'} size={20}/> }
+            icon={<FaPizzaSlice color={'white'} size={20}/> }
           />
           <div style={{width: 20}}/>
           <ResponsiveButton
-            text={'Button4'}
+            text={'kitchen'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/kitchen'}
             textColor={'white'}
-            icon={<FaWineGlassAlt color={'white'} size={20}/> }
+            icon={<GiKnifeFork color={'white'} size={20}/> }
           />
         </div>
         <div style={{
@@ -73,21 +81,21 @@ export const EnglishSelectionPage = () => {
           marginBottom: '7%'
         }}>
           <ResponsiveButton
-            text={'Button5'}
+            text={'Burgers'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/burgers'}
             textColor={'white'}
-            icon={<FaWineGlassAlt color={'white'} size={20}/> }
+            icon={<FaHamburger color={'white'} size={20}/> }
           />
           <div style={{width: 20}}/>
           <ResponsiveButton
-            text={'Button6'}
+            text={'Beers'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/beers'}
             textColor={'white'}
-            icon={<FaWineGlassAlt color={'white'} size={20}/> }
+            icon={<IoBeer color={'white'} size={20}/> }
           />
         </div>
         <div style={{
@@ -99,12 +107,39 @@ export const EnglishSelectionPage = () => {
           marginBottom: '7%'
         }}>
           <ResponsiveButton
-            text={'Button7'}
+            text={'Wines'}
             color={'black'}
             action={ButtonAction.LINK}
-            redirectTo={'/english'}
+            redirectTo={'/english/wines'}
             textColor={'white'}
             icon={<FaWineGlassAlt color={'white'} size={20}/> }
+          />
+          <div style={{width: 20}}/>
+          <ResponsiveButton
+            text={'Bar'}
+            color={'black'}
+            action={ButtonAction.LINK}
+            redirectTo={'/english/bar'}
+            textColor={'white'}
+            icon={<FaGlassWhiskey color={'white'} size={20}/> }
+          />
+        </div>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'row',
+          width: '100%',
+          marginBottom: '7%'
+        }}>
+          <ResponsiveButton
+            text={'Events'}
+            color={'black'}
+            action={ButtonAction.LINK}
+            redirectTo={'https://www.facebook.com/BirroviaCuneo/events'}
+            link
+            textColor={'white'}
+            icon={<BsFillCalendar2DateFill color={'white'} size={20}/> }
           />
         </div>
       </div>

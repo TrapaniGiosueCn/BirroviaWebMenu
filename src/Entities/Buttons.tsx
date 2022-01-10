@@ -8,5 +8,6 @@ export type ButtonType = {
   textColor: string;
   action: ButtonAction;
   redirectTo?: string;
+  link?: boolean
   icon?: any;
 }
