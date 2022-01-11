@@ -5,6 +5,20 @@ import App               from './App';
 import reportWebVitals   from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import './Fonts/Mouse_Deco.ttf'
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBZhRZnshsJYVkiaR023ZzfkBSpGLMVuSY",
+  authDomain: "birrovia-menu.firebaseapp.com",
+  projectId: "birrovia-menu",
+  storageBucket: "birrovia-menu.appspot.com",
+  messagingSenderId: "107188671999",
+  appId: "1:107188671999:web:7fb3673c023f7d1f54c3ca",
+  measurementId: "G-S6CCZ97225"
+};
+const app = initializeApp(firebaseConfig);
+getAnalytics(app);
 
 ReactDOM.render(
   <BrowserRouter>
